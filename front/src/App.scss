@@ -1,0 +1,621 @@
+$mainOrangeColor: #E79F14;
+$smoothOrangeColor: wheat;
+$secondaryOrange: #c77a11;
+$tertiary: #d78e08;
+$transparentOrange: #402a0038;
+$bg: #312407;
+@mixin f($j, $a, $dir) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  flex-direction: $dir;
+}
+
+::selection {
+  background: #c7900d;
+  color: #ffffff;
+}
+
+body {
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: $bg;
+
+
+  .btn-primary {
+    background-color: #3e2c0e;
+    border-color: #ffae00;
+    &:hover {
+    color: #fff;
+    background-color: #f09608;
+    border-color: #ffffff;
+    }
+}
+
+.btn-warning {
+  background-color: #3e2c0e;
+    border-color: #ffae00;
+    color: wheat;
+}
+
+.btn-danger {
+    background-color: #8a020f9e;
+    &:hover {
+      background: #d30909;
+    }
+  }
+
+  .container-fluid {
+    padding: 60px 40px;
+  }
+
+  .modal-body {
+    text-align: center;
+    .adminForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .card-body span {
+    cursor: pointer;
+}
+
+.left .active {
+  background: none;
+}
+  .active {
+    background: url(https://s2.qwant.com/thumbr/0x380/4/f/4ad64cdc26a6f44d28846da253cee928512982419b4ba54477bc2b13e8f479/274681.jpg?u=http%3A%2F%2Fimages.alphacoders.com%2F274%2F274681.jpg&q=0&b=1&p=0&a=0);
+      color: white;
+      // background: #847a6b;
+  }
+
+  .ecrire {
+    border: none;
+    width: 8em;
+    height: 2em;
+    padding: 0;
+    background: transparent;
+    &:hover {
+      input {
+      color: white;
+      }
+  }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .react-slideshow-container {
+    width: 30em;
+
+    .react-slideshow-zoom-wrapper,
+    .zoom-wrapper > div {
+      justify-content: center;
+      text-align: center !important;
+
+      .promo {
+        font-size: large;
+        font-family: fantasy;
+        background: #d78e08;
+        /* padding: 1em; */
+        border-radius: 5em;
+        position: absolute;
+        width: 4em;
+        height: 4em;
+        top: 4em;
+        right: 7em;
+        display: flex;
+        justify-content: center;
+        box-shadow: 3px 4px 15px 0 #00000085;
+        align-items: center;
+      }
+    }
+  }
+
+  .jumbotron {
+    padding: 1%;
+    background: #f5ecdc;
+  }
+
+  .react-slideshow-fade-wrapper {
+    height: 37em;
+
+    .each-fade {
+      text-align: center;
+
+      img {
+        width: auto;
+        height: 37em;
+      }
+    }
+  }
+
+  .stock {
+    padding: 0.5em;
+    background: green;
+    color: white;
+    width: 18em;
+  }
+
+  .rupture {
+    padding: 0.5em;
+    background: #e51a1a;
+    color: white;
+    width: 18em;
+  }
+
+  nav {
+    background-color: $transparentOrange;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    @include f(space-between, center, row);
+    .search {
+      display: flex;
+    }
+
+    .results {
+      position: absolute;
+left: -26em;
+top: 2em;
+background: black;
+width: 14.5em;
+padding: 0.4em;
+    }
+
+    input[name=search] {
+      background: #b1841247;
+      color: white;
+      border: 1px solid transparent;
+    }
+
+    select {
+      background: #6a6459;
+      color: wheat;
+    }
+
+    button {
+      position: relative;
+      @keyframes animation {
+        50% {
+          font-size: 1em;
+          background: #ff9d00;
+          color: black;
+          width: 20px;
+          height: 20px;
+        }
+
+        20% {
+          font-size: 2em;
+          background: black;
+          color: white;
+          width: 35px;
+          height: 35px;
+        }
+
+        50% {
+          font-size: 1em;
+          background: #ff9d00;
+          color: black;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .compteur {
+        background: #ff9d00;
+        position: absolute;
+        right: 0;
+        width: 22px;
+        width: 20px;
+        height: 20px;
+        bottom: 1px;
+        color: black;
+        border-radius: 1em;
+        box-shadow: 1px 2px 7px 0 #311602c2;
+        animation-name: animation;
+        animation-duration: 2s;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: antiquewhite;
+    }
+
+    .zone {
+      background: #1c12006b;
+      position: fixed;
+      flex-direction: column;
+      top: 3.3em;
+      right: 0;
+      display: flex;
+    }
+
+    .zoneCompte {
+      @extend .zone;
+
+      .toggleIC {
+        display: flex;
+
+        button {
+          color: white;
+          font-size: 1em;
+          position: relative;
+        }
+      }
+
+      .IC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .connexion form,
+      .inscription form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        height: 8em;
+
+        input:not([type=submit]) {
+          background: #4a3f2b;
+          border: none;
+        }
+
+        input[type=submit] {
+          background: #c77a11;
+          color: white;
+          border: 1px solid orange;
+        }
+      }
+
+      .connexion {
+        z-index: 0;
+        width: 20em;
+        background: #312407ad;
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        &:nth-child(odd) {
+          background: #3c2f17;
+        }
+        width: 100%;
+
+        &:hover {
+          background: #8f5300;
+        }
+      }
+    }
+
+    .zonePanier {
+      @extend .zone;
+      left: 0;
+      width: auto;
+      text-align: center;
+      color: #cdb991;
+      background: #2b1f0abf;
+
+      h1 {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 3em;
+      }
+
+      .Panier {
+        @include f(center, flex-start, row);
+        flex-wrap: wrap;
+        padding: 2em;
+        gap: 2em;
+
+        .PanierContenu {
+          border: 1px solid white;
+          background: #8d661e;
+          border-radius: 4px 4px;
+          box-shadow: 4px 4px 7px 0 #6e5c0b;
+
+          .PanierContenuImage img {
+            width: 14em;
+          }
+
+          .enlever {
+            width: 3em;
+            border-radius: 5px 0 1em;
+            background: #6d0505;
+          }
+
+          .ajoutEnlever {
+            @include f(center, center, row);
+            position: relative;
+            background: #130d0599;
+            border-radius: 4px;
+
+            .editionAjoutEnlever {
+              width: 100%;
+            }
+
+            .nbrElement {
+              right: 11px;
+              bottom: 4px;
+              text-align: center;
+              background: #523a17;
+              color: white;
+              font-weight: bold;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+
+      .buttonPanier {
+        background: #c77a11;
+        color: white;
+        border: 1px solid orange;
+        background: #c77a11;
+        height: 2em;
+        @include f(center, center, row);
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+    }
+
+    .left,
+    .right {
+      display: flex;
+      gap: 1em;
+
+      img:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .Bandeau {
+    background: url("https://m.media-amazon.com/images/I/810l6l9hswL._AC_SL1500_.jpg") center/cover;
+    @include f(center, center, row);
+
+    .recherche {
+      position: absolute;
+      top: 8em;
+      background: none;
+      width: 24em;
+      border: none;
+      border-bottom: 3px solid #936a07;
+      color: $smoothOrangeColor;
+    }
+
+    .Bandeau-text {
+      border-bottom: 2px solid $tertiary;
+      padding: 5em 0 1em;
+    }
+
+    .Bandeau-container {
+      background: #5b5245d1;
+      height: 100%;
+      width: 100%;
+      @include f(center, center, column-reverse);
+      color: white;
+    }
+  }
+
+  .Bandeau-Articles {
+    @extend .Bandeau;
+    height: 12em;
+  }
+
+  .Bandeau-Article {
+    @extend .Bandeau;
+    height: 40em;
+  }
+
+  .container2 {
+    @include f(center, center, row);
+    text-align: center;
+    flex-wrap: wrap;
+    background: #312407;
+
+    .section {
+      background: gainsboro;
+      width: 100%;
+      display: flex;
+      height: 32em;
+      justify-content: space-between;
+
+      .aside-left {
+        background: #e3970c;
+        width: 50em;
+        height: inherit;
+        color: white;
+      }
+
+      .section-article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 272em;
+        height: inherit;
+
+        .main-bloc-article {
+          width: 100%;
+        }
+
+        .article-description {
+          @include f(space-between, center, row);
+          width: 100%;
+          background: white;
+          color: #3a2907;
+          height: 100%;
+
+          .article-des-image img {
+            width: 18em;
+          }
+
+          .article-text {
+            width: 100%;
+          }
+
+          .article-nav {
+            @include f(center, center, column);
+            height: 100%;
+
+            a {
+              text-decoration: none;
+              color: white;
+            }
+
+            .voir {
+              background: #573903;
+            }
+
+            .ajouter {
+              background: #e3970c;
+            }
+
+            .button-texte {
+              height: 7em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 10em;
+            }
+          }
+        }
+
+        .article-caracteristique {
+          table {
+            width: 100%;
+            background: grey;
+
+            td:nth-child(odd) {
+              background-color: #8d8b87;
+            }
+
+            tr {
+              background: #5a5353;
+              color: white;
+            }
+          }
+        }
+      }
+
+      .aside-right {
+        @extend .aside-left;
+        width: inherit;
+        color: white;
+        height: inherit;
+        background: #3A2907;
+
+        .stock {
+          padding: 0.5em;
+          background: green;
+          width: 100%;
+        }
+
+        .rupture {
+          padding: 0.5em;
+          background: #e51a1a;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .categorieEtSousCategorie {
+    &:hover .hiddenSC {
+      clip-path: circle(90%);
+      transition: 1s;
+    }
+
+    &:hover .zoneButton {
+      clip-path: circle(90%);
+      color: #e79f147a;
+      transition: 1s;
+    }
+    // background: url("https://informatique.ajyeweb.com/7880-thickbox_default/ordinateur-portable-15-6-terra-mobile-1530-intel-core-i3-6100u-w10-4go-256go-ssd-fr1220539terra-wortmann.jpg") center/cover #282000;
+    min-width: 26em;
+    height: 26em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    $fade-white: #eee;
+    $white: #ccc;
+
+    a {
+      color: $fade-white;
+      text-decoration: none;
+
+      &:visited {
+        color: $white;
+        text-decoration: none;
+        opacity: 0.42;
+      }
+
+      &:hover {
+        opacity: 0.7;
+        text-decoration: underline;
+      }
+
+      &:active {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+
+    .hiddenSC {
+      @include f(center, center, column);
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background: #1a140ba3;
+      gap: 1em;
+      clip-path: circle(90%);
+      transition: 0.5s;
+
+      &:hover {
+        clip-path: circle(90%);
+        transition: 1s;
+      }
+    }
+
+    .linkSC {
+      z-index: 1;
+      background: #1a140ba3;
+      width: 100%;
+    }
+
+    .zoneButton {
+      background: $secondaryOrange;
+      width: 100%;
+    }
+
+    .categorieImg {
+      position: absolute;
+
+      img {
+        max-width: 26em;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: white;
+      height: 2em;
+      font-size: 1em;
+    }
+  }
+}

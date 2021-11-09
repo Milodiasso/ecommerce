@@ -1,0 +1,6 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+#Inscription:
+#  path: /api/todo/create
+#  controller: App\Controller\InscriptionController::create

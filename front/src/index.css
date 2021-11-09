@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  margin: 10px 0 !important;
+}
+
+.profil {
+  margin: 5% !important;
+}
+
+.profil .bandeau {
+  background: #6c6150 !important;
+}
+
+.hello {
+  font-size: bold;
+  font-family: fantasy;
+  color: white;
+}
+
+.add_address {
+  text-align: center;
+  font-size: 90px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.add_address:hover {
+  color: green;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.add_form {
+  z-index: 3;
+  position: fixed;
+  top: 30%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 2px black solid;
+  width: 30% !important;
+  border-radius: 30px;
+}
+
+.add_form * {
+  margin: 2px 5px;
+  border-radius: 20px !important;
+  outline: none;
+  padding: 2px;
+}
+
+.btn_form {
+  display: flex;
+}
+
+.resultats {
+  position: relative;
+  background-color: white;
+  z-index: 3;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.map-holder {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
